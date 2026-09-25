@@ -1,57 +1,320 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# 💰 Crowd-Funding Platform
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+A modern **Crowd-Funding Platform** that allows users to create fundraising campaigns and contribute funds to campaigns created by others. The platform provides an easy and transparent way for individuals or organizations to raise money for different causes, projects, and initiatives.
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+---
 
-## Project Overview
+## 📌 Project Overview
 
-This example project includes:
+The Crowd-Funding Platform is designed to connect **campaign creators** with **contributors**.
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+Users can:
 
-## Usage
+- Create fundraising campaigns
+- Add campaign details and funding goals
+- Browse available campaigns
+- Contribute to campaigns
+- Track campaign progress
+- View campaign information
+- Manage their campaigns
 
-### Running Tests
+The main goal of this project is to provide a simple and user-friendly platform for online fundraising.
 
-To run all the tests in the project, execute the following command:
+---
 
-```shell
-npx hardhat test
+## ✨ Features
+
+### 👤 User Features
+
+- User Registration & Login
+- User Authentication
+- User Profile Management
+- Browse Campaigns
+- Search Campaigns
+- View Campaign Details
+- Contribute to Campaigns
+- Track Contribution History
+
+### 📢 Campaign Features
+
+- Create a New Campaign
+- Add Campaign Title & Description
+- Set Funding Goal
+- Set Campaign Deadline
+- Upload Campaign Image
+- Display Amount Raised
+- Display Funding Progress
+- View Campaign Status
+- Manage Created Campaigns
+
+### 📊 Dashboard
+
+Users can view:
+
+- Total Campaigns
+- Total Amount Raised
+- Total Contributions
+- Active Campaigns
+- Completed Campaigns
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- MongoDB
+
+### Other Technologies
+
+- REST API
+- Git & GitHub
+- JWT Authentication
+- Cloud/Local Image Storage
+
+---
+
+## 🏗️ Project Structure
+
+```text
+crowd-funding/
+│
+├── client/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       ├── App.jsx
+│       └── main.jsx
+│
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   └── server.js
+│
+├── .gitignore
+├── README.md
+└── package.json
 ```
 
-You can also selectively run the Solidity or `mocha` tests:
+---
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/crowd-funding.git
 ```
 
-### Make a deployment to Sepolia
+### 2. Navigate to the Project
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
+```bash
+cd crowd-funding
 ```
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+### 3. Install Dependencies
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
+For the frontend:
 
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+```bash
+cd client
+npm install
 ```
 
-After setting the variable, you can run the deployment with the Sepolia network:
+For the backend:
 
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
+```bash
+cd ../server
+npm install
 ```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `server` directory.
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Replace the values with your own configuration.
+
+> ⚠️ Never upload your `.env` file or secret keys to GitHub.
+
+---
+
+## ▶️ Run the Project
+
+### Start Backend
+
+```bash
+cd server
+npm start
+```
+
+### Start Frontend
+
+Open another terminal:
+
+```bash
+cd client
+npm run dev
+```
+
+The application will then be available on the local development server.
+
+---
+
+## 🔄 Application Workflow
+
+```text
+User
+  │
+  ▼
+Register / Login
+  │
+  ▼
+Dashboard
+  │
+  ├───────────────┐
+  ▼               ▼
+Create Campaign   Browse Campaigns
+  │               │
+  ▼               ▼
+Set Goal         Select Campaign
+  │               │
+  └───────┬───────┘
+          ▼
+       Contribute
+          │
+          ▼
+   Campaign Progress
+          │
+          ▼
+     Goal Reached
+```
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of your project here.
+
+### Home Page
+
+```text
+Add your screenshot here
+```
+
+### Campaign Page
+
+```text
+Add your screenshot here
+```
+
+### Dashboard
+
+```text
+Add your screenshot here
+```
+
+---
+
+## 🎯 Use Cases
+
+This platform can be used for:
+
+- 🏥 Medical Fundraising
+- 🎓 Education
+- 🤝 Social Causes
+- 🚀 Startup Projects
+- 🎨 Creative Projects
+- 🌱 Environmental Causes
+- 🏘️ Community Projects
+- ❤️ Personal Fundraising
+
+---
+
+## 🔒 Security
+
+The application follows basic security practices such as:
+
+- Password authentication
+- JWT-based authorization
+- Protected API routes
+- Environment variables for sensitive information
+- Input validation
+
+---
+
+## 🚀 Future Improvements
+
+Some planned improvements include:
+
+- Online Payment Gateway Integration
+- Razorpay/Stripe Integration
+- Email Notifications
+- Campaign Verification
+- Admin Dashboard
+- Advanced Search & Filters
+- Donation/Contribution Receipts
+- Campaign Sharing on Social Media
+- Real-time Campaign Updates
+- Analytics Dashboard
+- Cloud Image Storage
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project, I learned and practiced:
+
+- Full-Stack Web Development
+- REST API Development
+- Database Management
+- Authentication & Authorization
+- CRUD Operations
+- Frontend & Backend Integration
+- Git & GitHub
+- Responsive UI Development
+- Deployment Concepts
+
+---
+
+## 👨‍💻 Author
+
+**Dev Yadav**
+
+- GitHub: [GitHub Profile](https://github.com/devbratyadav9792)
+
+---
+
+## 📄 License
+
+This project is created for **educational and portfolio purposes**.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
