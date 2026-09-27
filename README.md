@@ -152,7 +152,7 @@ npm install
 Create a `.env` file inside the `server` directory.
 
 ```env
-PORT=5000
+PORT=,,,,
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
@@ -273,15 +273,12 @@ Some planned improvements include:
 
 - Online Payment Gateway Integration
 - Razorpay/Stripe Integration
-- Email Notifications
 - Campaign Verification
 - Admin Dashboard
 - Advanced Search & Filters
 - Donation/Contribution Receipts
 - Campaign Sharing on Social Media
 - Real-time Campaign Updates
-- Analytics Dashboard
-- Cloud Image Storage
 
 ---
 
